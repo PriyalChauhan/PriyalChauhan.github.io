@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="table.css">
+   
+</head>
+<body>
+    <a href = "index.html"><h1 class="logo">Work from home toolbox<img class="logo1" alt="logo" src="box.png"></h1></a>
+    
+
+    <!--Sidebar for navigation-->
+    <section>
+        <nav id="navbar">
+            <div class="container">
+                <ul>
+                    <li class="nav-item"><a href="Index.html">Create New Project</a><br></li>
+                    <li class="nav-item"><a href="create-task.html">Create Task</a><br></li>
+                    <li class="nav-item"><a href="#">Active Sprint</a></li>
+                </ul>
+            </div>
+         </nav>
+    </section>
+             
+
+    <!--- Create Project logo --->
+    <div class="Create-Project">
+        <a href="#" id="button" class="create">
+            <img id="img" alt="addSign" src="add.svg">
+            CREATE PROJECT
+        </a>
+    </div>
+
+    <div id="footer">
+       Work From Home Toolbox
+    </div>
+    
+    <div class="bg-modal1">
+      <div class="bg-content">
+        <div class="close">+</div>
+    	    <h2 class="lil-left">Enter Project Name</h2>
+          <form id="nameForm" >
+        		<input id="input1"  type="text" placeholder="Project Name"  required>
+          	    <input type="submit" id="next"  class="button">
+          
+      </div>
+    </div>
+
+    <div class="bg-modal2">
+        <div class="bg-content" id="bg-content2">
+            <div class="close1">+</div>
+            <h2 >Assign Team Member</h2>
+                
+                <label for="quantity"></label>
+                <input type="number" id="quantity" name="quantity" placeholder = "Total Team Members(max 10)" min="1" max="10">
+                <button type="button" id="okButton" onclick="emailGen()" >OK</button>
+                <div id="container"></div>
+                <input type="submit"  id="next2" onsubmit="tableGen()" class="button">
+            </form>
+        </div>
+    </div>
+    
+<script type="text/javascript" src="create-project-icon.js">
+    
+</script>
+
+    
+    
+</body>
+</html>
