@@ -1,9 +1,21 @@
+#tbl-Container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    left: 220px;
+    top: 100px;
+    position: absolute;
+    z-index: -1;
+}
+
+#tbl-Container > div {
+    margin: 15px;
+}
+
+
 #tableid{
     border-collapse: collapse;
     box-sizing: border-box;
-    position: absolute;
-    left: 220px;
-    top: 100px;
     height:auto;
     width:200px;
     color:#191970;

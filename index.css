@@ -8,12 +8,19 @@
 
 
 
-.logo{
+.logo-Container{
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: #d6d4e0;
     padding: 20px;
     margin:0;
     color: #622569;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+    transition: 0.5s;
+    white-space: nowrap;
+    
+    
 }
 
 .logo1{
@@ -22,14 +29,15 @@
     margin-left: 20px;
     top:3px;
     position: absolute;
+    transition: 0.5s;
 }
 
-#navbar ul{
+#navbar  ul{
     position:fixed;
+    top: 77px;
     list-style-type:none;
     height: 100%;
     width: 200px;
-    z-index: 0;
     background-color:#191970;
     border-right: 6px solid lightgrey;
     font-size: 22px;
@@ -57,7 +65,7 @@
 .create{    
     bottom: 50px;
     right: 10px;
-    position:absolute;
+    position:fixed;
     font-family: 'Times New Roman';
     font-size:20px;
     font-weight: bold;
@@ -123,6 +131,8 @@
 #bg-content2{
     width: 600px;
     height: 500px;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .lil-left{
@@ -149,14 +159,18 @@ input{
 
 .button{
     display:block;
-    background-color:#00008B;
+    background-color:#00008b;
     color: white;
     width:55px;
-    height: 21px;
+    height: 26px;
     border-radius: 20px;
     position: relative;
     left: 235px;
-    font-size:10px;
+    font-size:13px;
+}
+
+#next{
+    top:-10px;
 }
 
 /* --------create-task.css---------- */
@@ -217,3 +231,34 @@ input{
 }
 
 
+/*-----------input-field-css & .bg-content2 childs--------*/
+
+#quantity{
+    padding: 7px;
+    padding-left: 38px;
+    font-size: 15px;
+    background-image: url("dp.png");
+    background-size: 38px 30px;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+#okButton{
+    padding: 3px 20px;
+    font-size: 15px;
+    position: absolute;
+    left:500px;
+    top: 65px;
+}
+
+#okButton:hover{
+    background-color:#7777b3;
+    text-decoration: none;
+    color: white;
+}
+
+#container:nth-child(){
+ margin:0;
+}
