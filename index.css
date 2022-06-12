@@ -22,7 +22,7 @@
 }
 
 .logo{
-    color:#622569;
+    color:#72077e;
 }
 
 .logo1{
@@ -181,8 +181,7 @@ input{
     flex-direction: row;
     left:210px;
     position:relative;
-    top: 17px;
-    background-color: back;
+    top: 90px;
 }
 
 .create-container > .box{
@@ -193,6 +192,9 @@ input{
     border: solid;
     height: 453px;
     border-radius: 10px;
+    overflow: auto;
+    
+   
 }
 
 #to-do{
@@ -215,10 +217,9 @@ input{
     text-align: center;
 }
 
-.task-btn{
-    position: absolute;
-    top: 120px;
-    left:221px;
+.taskBtn{
+    left: 2px;
+    margin: 0px;
     width: 300px;
     height:30px;
     font-size: 15px;
@@ -227,9 +228,24 @@ input{
    
 }
 
-.task-btn:hover{
+.taskBtn:hover{
      background-color: white;
     color: black;
+}
+
+.task{
+    margin: 10px 0px;
+    color:#622569;
+    height:10px;
+    width:278px;
+    left: 5px;
+    resize: vertical;
+    
+    
+}
+
+#taskId{
+    max-width: 300px;
 }
 
 
@@ -264,3 +280,5 @@ input{
 #container:nth-child(){
  margin:0;
 }
+
+

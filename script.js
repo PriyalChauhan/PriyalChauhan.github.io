@@ -12,6 +12,41 @@
         document.querySelector(".logo-Container").style.transition = "1s";
 
       }
-
-   
  }
+
+  // create-task button function
+  const taskId = document.querySelector("#taskId");
+  document.querySelector(".taskBtn").addEventListener("click",
+function(){
+  const task = document.createElement("input");
+  task.type = "textbox";
+  task.setAttribute("class","task");
+  task.setAttribute("value"," working ");
+  task.setAttribute("draggable", "true");
+  taskId.appendChild(task);
+  
+})
+  
+// draggable functionality
+const tasks = document.querySelectorAll('.task')
+const boxes = document.querySelectorAll('.box')
+
+tasks.forEach(task => {
+  task.addEventListener('dragstart', () => {
+    task.classList.add('dragging')
+  } )
+
+task.addEventListener('dragend', () => {
+  task.classList.remove('dragging')
+})
+})
+
+boxes.forEach(box => {
+  box.addEventListener('dragover', e => {
+    e.preventDefault()
+    const tasku = document.querySelectorAll('.dragging')
+    box.appendChild(tasku)
+    taskId.appendChild(box)
+    
+  })
+})

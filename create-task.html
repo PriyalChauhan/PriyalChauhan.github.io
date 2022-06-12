@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="script.js" defer></script>
     <style> body{
         max-width: 100%;
         overflow-x: hidden;
@@ -14,9 +15,10 @@
    
 </head>
 <body>
-    <a href = "index.html"><h1 class="logo">Work from home toolbox<img class="logo1" alt="logo" src="box.png"></h1></a>
+    <div class="logo-Container">
+        <a href = "index.html"><h1 class="logo">Work From Home Toolbox<img class="logo1" alt="logo" src="box.png"></h1></a>
+        </div>
     
-
     <!--Sidebar for navigation-->
     <section>
         <nav id="navbar">
@@ -31,17 +33,14 @@
     </section>
 
     <div class=create-container>
-        <div class="box" id="to-do"><span>To Do</span></div>
+        <div class="box" id="to-do"><span>To Do</span>
+            <input class="taskBtn" type="button" value="Create Task">
+            <div id="taskId" >
+            </div>
+        </div>
         <div class="box" id="doing"><span>Doing</span></div>
         <div class="box" id="done"><span>Done</span></div>
     </div>
-
-    <div class="to-do-list">
-        <div ><input class="task-btn" type="button" value="Create Task"></div>
-        
-    </div>
-
-
 
     <div id="footer">
        Work From Home Toolbox
