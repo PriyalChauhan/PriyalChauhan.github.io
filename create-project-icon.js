@@ -53,7 +53,7 @@ function getData(){
         }
         
         if(quant > 10){
-            alert("please keep it low");
+            alert("Team members should be less than 10");
         } else{
             for(a=0; a<quant; a++){
             var emailGen = document.createElement("input");
