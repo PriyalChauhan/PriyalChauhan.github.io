@@ -24,7 +24,7 @@
         <nav id="navbar">
             <div class="container">
                 <ul>
-                    <li class="nav-item"><a href="Index.html">Create New Project</a><br></li>
+                    <li class="nav-item"><a href="index.html">Create New Project</a><br></li>
                     <li class="nav-item"><a href="create-task.html">Create Task</a><br></li>
                     <li class="nav-item"><a href="#">Active Sprint</a></li>
                 </ul>
@@ -33,13 +33,16 @@
     </section>
 
     <div class=create-container>
-        <div class="box" id="to-do"><span>To Do</span>
-            <input class="taskBtn" type="button" value="Create Task">
-            <div id="taskId" >
-            </div>
+        <div class="box" id="to-do" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+            <span>To Do</span>
+                <input class="taskBtn" type="button" value="Create Task">   
         </div>
-        <div class="box" id="doing"><span>Doing</span></div>
-        <div class="box" id="done"><span>Done</span></div>
+        
+        <div class="box" id="doing" ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"><span>Doing</span></div>
+
+        <div class="box" id="done" ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"><span>Done</span></div>
     </div>
 
     <div id="footer">

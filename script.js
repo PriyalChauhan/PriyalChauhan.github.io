@@ -15,38 +15,43 @@
  }
 
   // create-task button function
-  const taskId = document.querySelector("#taskId");
+  const box = document.querySelector(".box");
+  
   document.querySelector(".taskBtn").addEventListener("click",
 function(){
-  const task = document.createElement("input");
-  task.type = "textbox";
-  task.setAttribute("class","task");
-  task.setAttribute("value"," working ");
-  task.setAttribute("draggable", "true");
-  taskId.appendChild(task);
+  const taskbox = document.createElement("div"); //taskbox div-------
+  taskbox.setAttribute("class","taskbox");
+  taskbox.setAttribute("draggable", "true");
+  taskbox.setAttribute("ondragstart","onDragStart(event)")
+//textbox----------
+  const textbox = document.createElement("input");
+  textbox.type = "textbox";
+  textbox.setAttribute("class","textbox");
+  taskbox.appendChild(textbox);
+  box.appendChild(taskbox);
   
 })
   
 // draggable functionality
-const tasks = document.querySelectorAll('.task')
-const boxes = document.querySelectorAll('.box')
+function onDragStart(event) {
+  event
+    .dataTransfer
+    .setData('text/html/plain', event.target.id);
+}
 
-tasks.forEach(task => {
-  task.addEventListener('dragstart', () => {
-    task.classList.add('dragging')
-  } )
+function onDragOver(event) {
+  event.preventDefault();
+}
 
-task.addEventListener('dragend', () => {
-  task.classList.remove('dragging')
-})
-})
+function onDrop(event) {
+  const id = event
+    .dataTransfer
+    .getData('text/html/plain');
 
-boxes.forEach(box => {
-  box.addEventListener('dragover', e => {
-    e.preventDefault()
-    const tasku = document.querySelectorAll('.dragging')
-    box.appendChild(tasku)
-    taskId.appendChild(box)
-    
-  })
-})
+    const draggableElement = document.getElementById(id);
+    const dropzone = event.target;
+    dropzone.appendChild(draggableElement);
+    event
+    .dataTransfer
+    .clearData();
+}

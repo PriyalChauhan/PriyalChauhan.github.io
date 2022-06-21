@@ -233,19 +233,13 @@ input{
     color: black;
 }
 
-.task{
+.textbox{
     margin: 10px 0px;
     color:#622569;
     height:10px;
     width:278px;
     left: 5px;
     resize: vertical;
-    
-    
-}
-
-#taskId{
-    max-width: 300px;
 }
 
 
